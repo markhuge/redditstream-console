@@ -33,8 +33,7 @@ type Payload []struct {
 func Get(url string) ([]Comment, error) {
 	var comments []Comment
 	client := &http.Client{}
-	url = url + ".json"
-	// TODO specify new posts here instead of in URL
+	url = url + ".json?sort=new"
 	// TODO pagination?
 	// TODO cache by id
 
